@@ -27,7 +27,7 @@
 #include "switch_chip.h"
 #include <linux/huawei/usb/hisi_usb.h>
 #ifdef CONFIG_HDMI_K3
-#include <../../../../../../kernel/drivers/video/hisi/hdmi/k3_hdmi.h>
+#include <../../../video/hisi/hdmi/k3_hdmi.h>
 #endif
 #ifdef CONFIG_HUAWEI_HW_DEV_DCT
 #include <linux/hw_dev_dec.h>

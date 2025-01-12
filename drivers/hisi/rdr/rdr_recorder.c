@@ -1298,7 +1298,7 @@ noti_is_ap:
 	case HISI_RDR_MOD_CORE_HIFI:
 		if ((mod_id & HISI_RDR_MOD_EXCE_MASK) == HISI_RDR_MOD_EXCE_WD) {
 #ifdef HIFI_WD_DEBUG
-			hifireset_runcbfun(DRV_RESET_CALLCBFUN_RESET_BEFORE);
+			//hifireset_runcbfun(DRV_RESET_CALLCBFUN_RESET_BEFORE);
 			reset_set_cpu_status(0, 0);
 #ifdef CONFIG_ARM64
 			if ((hifi_is_power_on())) {
@@ -2872,7 +2872,7 @@ static int rdr_do_hifi_reset(int mod_id)
 	}
 	reset_set_cpu_status(1, 0);
 	sochifi_watchdog_send_event();
-	hifireset_runcbfun(DRV_RESET_CALLCBFUN_RESET_AFTER);
+	//hifireset_runcbfun(DRV_RESET_CALLCBFUN_RESET_AFTER);
 	g_rdr_global->hifi3.save_file_flag = DUMP_INIT_FLAG_WAIT;
 	return ret;
 }

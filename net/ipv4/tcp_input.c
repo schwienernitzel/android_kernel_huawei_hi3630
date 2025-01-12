@@ -677,7 +677,7 @@ static void tcp_rtt_estimator(struct sock *sk, const __u32 mrtt)
 #endif
 
 #ifdef CONFIG_HW_WIFIPRO
-	if((is_wifipro_on || wifi_is_on()) && mrtt != 0){
+	if (is_wifipro_on && mrtt != 0) {
 		wifipro_update_rtt(mrtt<<3, sk);
 	}
 #endif
